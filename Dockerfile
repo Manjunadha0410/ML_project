@@ -1,8 +1,17 @@
-FROM python:3.8-slim-buster
+FROM python:3.8-slim
+
 WORKDIR /app
 COPY . /app
 
-RUN apt update -y && apt install awscli -y
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg libsm6 libxext6 unzip \
+ && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 unzip -y && pip install -r requirements.txt
+# Install AWS CLI via pip
+RUN pip install awscli
+
+# Install Python requirements
+RUN pip install -r requirements.txt
+
 CMD ["python3", "app.py"]
