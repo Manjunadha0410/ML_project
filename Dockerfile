@@ -1,18 +1,19 @@
-FROM python:3.9-slim
-
+# Build stage
+FROM python:3.8-slim-bookworm as builder
 
 WORKDIR /app
-COPY . /app
+COPY requirements.txt .
 
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-    ffmpeg libsm6 libxext6 unzip \
- && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y build-essential \
+    && pip install --user -r requirements.txt
 
-# Install AWS CLI via pip
-RUN pip install awscli
+# Runtime stage
+FROM python:3.8-slim-bookworm
 
-# Install Python requirements
-RUN pip install -r requirements.txt
+WORKDIR /app
+COPY --from=builder /root/.local /root/.local
+COPY . .
+
+ENV PATH=/root/.local/bin:$PATH
 
 CMD ["python3", "app.py"]
