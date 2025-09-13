@@ -1,12 +1,9 @@
 ### Student-Performance-Prediction-Production-ML-Pipeline-with-CI-CD
 
-```markdown
 # Student Performance Prediction System 
 A **production-ready machine learning system** with a modular pipeline architecture.  
 The application predicts student academic performance based on demographic and academic attributes.  
 It includes a **full CI/CD pipeline** with continuous integration, containerization, and deployment on **AWS (ECR + EC2)**.  
-
----
 
 ## 🚀 Features
 - **Prediction System**: Predicts student performance based on multiple features  
@@ -16,8 +13,6 @@ It includes a **full CI/CD pipeline** with continuous integration, containerizat
 - **CI/CD Workflow**: Automated linting, Docker build & push, AWS deployment  
 - **Containerized Deployment**: Runs inside Docker with Amazon ECR + EC2  
 
----
-
 ## 🛠️ Tech Stack
 - **Programming**: Python (3.8+)  
 - **Frameworks**: Flask  
@@ -26,12 +21,10 @@ It includes a **full CI/CD pipeline** with continuous integration, containerizat
 - **DevOps**: Docker, GitHub Actions, AWS ECR, EC2  
 - **Version Control**: Git, GitHub  
 
----
-```
 ## 📂 Project Structure
 
 
-```markdown
+```
 mlproject-main/
 ├── src/                  # Core ML pipeline system (ingestion, transformation, training, prediction)
 │   ├── components/       # Reusable components for pipeline stages
