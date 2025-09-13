@@ -1,3 +1,5 @@
+### Student-Performance-Prediction-Production-ML-Pipeline-with-CI-CD
+
 ```markdown
 # Student Performance Prediction System 
 A **production-ready machine learning system** with a modular pipeline architecture.  
@@ -8,7 +10,7 @@ It includes a **full CI/CD pipeline** with continuous integration, containerizat
 
 ## 🚀 Features
 - **Prediction System**: Predicts student performance based on multiple features  
-- **Web Interface**: Simple form-based input for predictions (Flask/FastAPI)  
+- **Web Interface**: Simple form-based input for predictions (Flask)  
 - **Production-Ready ML Pipeline**: Modular pipeline for ingestion, transformation, training, and prediction  
 - **Pre-Trained Models**: Includes CatBoost and XGBoost models  
 - **CI/CD Workflow**: Automated linting, Docker build & push, AWS deployment  
@@ -18,7 +20,7 @@ It includes a **full CI/CD pipeline** with continuous integration, containerizat
 
 ## 🛠️ Tech Stack
 - **Programming**: Python (3.8+)  
-- **Frameworks**: Flask / FastAPI  
+- **Frameworks**: Flask  
 - **ML Models**: Scikit-learn, XGBoost, CatBoost  
 - **Pipelines**: Custom modular production-grade ML pipeline system  
 - **DevOps**: Docker, GitHub Actions, AWS ECR, EC2  
@@ -38,7 +40,7 @@ mlproject-main/
 │   └── **init**.py
 ├── templates/            # HTML templates for web app
 ├── artifacts/            # Stored models, preprocessors
-├── notebook/             # EDA and model development
+├── notebook/            
 ├── .github/workflows/    # CI/CD workflow configs
 ├── app.py                # Web application entry point
 ├── Dockerfile            # Containerization config
